@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>lowqualitygame</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload='
+    log.push("main website loaded");
+    document.getElementById("ts").style.display = "none";
+    document.getElementById("back").style.display = "none";
+    document.getElementById("options").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("canvas").style["z-index"] = -999;
+    document.getElementById("restartback").style.display="none";
+    document.getElementById("won").style.display="none";
+    MAINLOAD()
+  '>
+  <canvas id="canvas"></canvas><br>
+  <script src="script.js"></script>
+  <span id="ts" class="ts">
+  <button onclick="
+      menu=1;
+      hidel('ts');
+      sounds['music/titlescreen'].loop = false;
+      sounds['music/titlescreen'].pause();
+    t=0
+    ">play</button>
+  <button onclick="
+      menu=2;
+      hidel('ts')
+    showl('back')
+    showl('about')
+    ">about</button>
+  <button onclick="
+    menu=2;
+    hidel('ts')
+    showl('back')
+    showl('options')
+  ">options</button>
+  </span>
+  <span id="back" class="back">
+    <button onclick="
+      menu=0;
+      hidel('options')
+      showl('ts')
+      hidel('back')
+      hidel('about')
+      ">back
+    </button>
+  </span>
+  <span id="options" class="menu">
+    <h2>OPTIONS</h2><br><br>
+    Difficulty
+    <form name="myForm" action="" method="GET">
+  <input type="radio" id="dif_e" name="dif" value="0">
+  <label for="dif_e">Easy</label><br>
+  <input type="radio" id="dif_m" name="dif" value="1">
+  <label for="dif_m">Medium</label><br>
+  <input type="radio" id="dif_h" name="dif" value="2">
+  <label for="dif_h">Hard</label><br>
+  <input type="button" name="button" value="save" onClick="testResults(this.form)" class="button"><br>
+      for now these are all of the options (sorry)
+  </form>
+  </span>
+  <span id="about" class="menu">
+    <h2>ABOUT</h2><br>
+    <h4>controls</h4><br>
+    move with left and right arrows. thats all. for now, youre the blue guy. you have to get to the top (be careful, its not implemented fully yet)<br>
+    <h4>how does this game work?</h4><br>
+    there are 15 players. you being one of them.<br>
+    there are also 14 legs.<br>
+    the last one that finishes a leg is eliminated.<br>
+    the first one to get to the end, well, wins.<br>
+    <br><br><br>
+    <h3>CREDITS</h3><br>
+    <b>code:</b><br>
+    me.<br><br>
+    <b>images:</b><br>
+    also me.<br><br>
+    <b>music, sounds:</b><br>
+    EARTHBOUND OST - battle against a mobile opponent - playing right now<br>
+    wondershare filmora 10 (dont ask)<br>
+    platypus<br><br>
+    translations:<br>
+    none, for now.
+  </span>
+  <span id="won" class="menu">
+    <h2><span id="whowon"></span> WON!</h2>
+    <span id="timer"></span>
+  </span>
+  <span id="restartback" class="back">
+    <button onclick="
+      location.reload()
+      ">back
+    </button>
+  </span>
+  lowqualitygame v1.0.231014
+</body>
+
+</html>

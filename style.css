@@ -1,0 +1,75 @@
+html, body {
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+  color: white;
+  font-family: "Arial";
+}
+
+.ts{
+  position:absolute;
+  left: 432px !important;
+  top: 600px !important;
+}
+.back{
+  position:absolute;
+  left: 50px !important;
+  top: 764px !important;
+  z-index: 5;
+}
+button, .button{
+  padding: 5px;
+  margin: 10px;
+  font-size: 15px;
+  font-family: "Arial";
+  background: #c7c7c7;
+}
+.menu{
+  position:absolute;
+  left: 40px;
+  top: 40px;
+  background: #00000077 ;
+  color: white !important;
+  width: calc(1152px - 40px * 2 - 35px) ;
+  height: calc(864px - 40px * 2 - 35px);
+  padding: 15px;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+}
+.menu h2{
+  text-align: center;
+  margin-top: 10px;
+}
+.title{
+  text-align: center !important;
+  margin-top: 10px !important;
+  color: white !important;
+}
+button .inviz{
+  background: #00000000 !important;
+  border: none !important;
+}
+button, .button, .menu{
+  border-top: 2px solid #eee;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #888;
+  border-bottom: 2px solid #888;
+  box-shadow: inset 2px 2px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px
+}
+button:hover{
+  background: #fff;
+    box-shadow: inset 2px 2px #fff, 1px 0 #000, 0 1px #000, 1px 1px
+} 
+button:active{
+  background: #aaa;
+  border-bottom: 2px solid #ccc;
+  border-right: 2px solid #cdcdcd;
+  border-left: 2px solid #888;
+  border-top: 2px solid #888;
+  box-shadow: inset 0px 0px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px
+} 
