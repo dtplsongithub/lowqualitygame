@@ -1,9 +1,22 @@
+
+var playlist = ["elim","first","lap","powerup2","powerup","gameover","click","music/titlescreen"];
+var playlistdir = "sounds";
+var playlistfile = ["ogg","ogg","ogg","ogg","ogg","ogg","wav","mp3"]
+var sounds = {}
+var tlap = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+var log = []
+pr=0
+// load sounds
+ 
+// load functions
+js={}
+
 function MAINLOAD(){
    for (i in playlist) {
   sounds[`${playlist[i]}`] = new Audio(`${playlistdir}/${playlist[i]}.${playlistfile[i]}`);
     log.push(`loaded file /sounds/${playlist[i]}.ogg`);
 }
-  fetch("/f.json")
+  fetch("./f.json")
   .then(data => data.text())
   .then(body => {
     log.push("loaded file /f.json");
@@ -30,18 +43,6 @@ function MAINLOAD(){
   
 loadImages(imgtoload);
 }
-var playlist = ["elim","first","lap","powerup2","powerup","gameover","click","music/titlescreen"];
-var playlistdir = "sounds";
-var playlistfile = ["ogg","ogg","ogg","ogg","ogg","ogg","wav","mp3"]
-var sounds = {}
-var tlap = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-var log = []
-pr=0
-// load sounds
- 
-// load functions
-js={}
-
 
 var Images = {};
 
@@ -62,7 +63,7 @@ var imgtoload = []
 for (i in gallery) {
   imgtoload.push({
     "name":gallery[i],
-    "url":`/images/${gallery[i]}.png`
+    "url":`./images/${gallery[i]}.png`
   })
 }
 

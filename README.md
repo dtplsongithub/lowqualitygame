@@ -1,1 +1,2 @@
-idk what to add here honestly
+# lowqualitygame
+first attempt at a game (~late 2023)
