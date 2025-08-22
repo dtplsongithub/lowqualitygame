@@ -19,16 +19,16 @@ function MAINLOAD(){
   fetch("./f.json")
   .then(data => data.text())
   .then(body => {
-    log.push("loaded file /f.json");
+    log.push("loaded file ./f.json");
     var ee = JSON.parse(body);
     for (a = 0; a < (ee.length); a++) {
       if (ee[a]) {
         (function (ee, a) {
-          fetch("/js/" + (ee[a]))
+          fetch("./js/" + (ee[a]))
             .then(data => data.text())
             .then(body => {
               (function (body) {
-                log.push("loaded file /js/" + ee[a]);
+                log.push("loaded file ./js/" + ee[a]);
                 try {
                   eval(body);
                 } catch (e) {
